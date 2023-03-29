@@ -24,6 +24,10 @@ public class Servidor {
         //realizar acciones con clientel
         try {
             Socket cliente2 = Servidor.accept();//esperando a otro cliente
+            Socket Cliente2 = null;//conecta
+            Cliente2 = new Socket("localhost", Puerto);
+            System.out.println("Puerto local: "+Cliente2.getLocalPort());//devuelve el puerto local
+            System.out.println("Puerto Remoto: "+Cliente2.getPort());//devuelve el puerto remoto
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -31,6 +35,10 @@ public class Servidor {
         //realizar acciones con cliente3
         try {
             Socket cliente3 = Servidor.accept();//esperando a otro cliente
+            Socket Cliente3 = null;//conecta
+            Cliente3 = new Socket("localhost", Puerto);
+            System.out.println("Puerto local: "+Cliente3.getLocalPort());//devuelve el puerto local
+            System.out.println("Puerto Remoto: "+Cliente3.getPort());//devuelve el puerto remoto
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
